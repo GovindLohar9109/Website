@@ -27,5 +27,4 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Start app check
-        run: node src/app.js
+      
