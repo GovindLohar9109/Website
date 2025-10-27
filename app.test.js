@@ -1,5 +1,4 @@
-// app.test.js
-
+// Simple function
 function add() {
   return 1 + 1;
 }

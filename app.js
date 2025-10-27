@@ -1,11 +1,15 @@
-import express from "express";
-import dotenv from "dotenv";
-dotenv.config();
+import express from 'express';
+
 const app = express();
-const PORT = process.env.PORT || 8000;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.json({ message: 'Hello from CI/CD test app!' });
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+export default app;
+
+// Start server only when not in test mode
+if (process.env.NODE_ENV !== 'test') {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+}
