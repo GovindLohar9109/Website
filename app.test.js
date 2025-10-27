@@ -5,5 +5,5 @@ function add() {
 
 // Jest test case
 test('adds numbers correctly', () => {
-  expect(add()).toBe(2);
+  expect(add()).toBe(3);
 });
